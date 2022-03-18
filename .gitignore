@@ -1,0 +1,11 @@
+## Client
+
+## node modules
+
+/client/node_modules
+
+## DS_Store
+
+/client/.DS_Store
+client/public/logo192.png
+client/public/logo512.png
