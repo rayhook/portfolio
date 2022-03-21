@@ -1,9 +1,16 @@
 .container {
   min-height: 100vh;
-  background-image: linear-gradient(#0f0f0f, #02041a);
+  background-image: linear-gradient(to bottom left, #0f0f0f, #04003b, #400920, #210016);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.projects-slide {
+  height: 60vh;
+  width: 50vw;
+  background-color: black;
 }
 
 .title {
