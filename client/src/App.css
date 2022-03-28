@@ -38,6 +38,24 @@
   font-size: 3rem;
   letter-spacing: 2rem;
   font-weight: 400;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  backface-visibility: hidden;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-6rem) rotate(90deg);
+  }
+  80% {
+    transform: translateX(1rem) rotate(170deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
 }
 
 .heading-primary-sub {
@@ -45,6 +63,33 @@
   font-size: 2rem;
   letter-spacing: 1rem;
   font-weight: 200;
+  animation: moveInRight 1s ease-out;
+  backface-visibility: hidden;
+  /* animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; */
+
+  /*
+  animation-delay: 1s;
+  animation-iteration-count: 4;
+
+  */
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(6rem);
+  }
+
+  80% {
+    transform: translateX(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
 }
 
 .navbar {
