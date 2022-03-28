@@ -60,6 +60,14 @@
   background-color: green;
 }
 
+.project-container {
+  display: grid;
+}
+
+.title {
+  font-size: 2rem;
+}
+
 .about-me {
   height: 50vh;
   width: 50vw;

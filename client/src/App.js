@@ -13,7 +13,10 @@ function App() {
             <span className="heading-primary-sub">showcasing my projects</span>
           </h1>
         </div>
-        <div className="projects"></div>
+        <div className="projects">
+          <h1 className="title">Projects</h1>
+          <div className="project-container"></div>
+        </div>
         <div className="about-me">Talk about myself</div>
         <div className="contact">How to contact me</div>
       </div>
