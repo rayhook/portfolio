@@ -24,13 +24,20 @@
   background-size: cover;
   background-position: top;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
 }
 
 .heading-primary {
   color: white;
   text-transform: uppercase;
+  margin-bottom: 8rem;
 }
 
 .heading-primary-main {
@@ -47,10 +54,10 @@
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-6rem) rotate(90deg);
+    transform: translateX(-6rem);
   }
   80% {
-    transform: translateX(1rem) rotate(170deg);
+    transform: translateX(1rem);
   }
   100% {
     opacity: 1;
@@ -102,25 +109,72 @@
   height: 100vh;
   width: 50vw;
   color: white;
-  background-color: green;
+}
+
+.projects-title {
+  margin: 4rem 0rem;
+  font-size: 5rem;
 }
 
 .project-container {
   display: grid;
-}
-
-.title {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   font-size: 2rem;
 }
 
 .about-me {
   height: 50vh;
   width: 50vw;
-  background-color: red;
+  color: white;
+}
+
+.about-title {
+  font-size: 5rem;
+  margin: 4rem 0rem;
+}
+
+.about-text {
+  font-size: 2rem;
 }
 
 .contact {
   height: 50vh;
   width: 50vw;
-  background-color: purple;
+  color: white;
+}
+
+.contact-title {
+  font-size: 5rem;
+  margin: 4rem 0rem;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  font-size: 2rem;
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: coral;
+  padding: 1rem 4rem;
+  color: white;
+  border-radius: 5rem;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: white;
+  transform: translateY(-0.25rem);
+  color: coral;
+  box-shadow: 0 2.5rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.2);
 }
