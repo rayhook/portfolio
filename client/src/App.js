@@ -10,16 +10,17 @@ function App() {
   return (
     <div className="main">
       <div className="container">
-        <Navbar className="navbar" />
-        <div className="impressive-object">
+        <div className="heading-primary-container">
           <h1 className="heading-primary">
             <span className="heading-primary-main">Welcome to my portfolio</span>
-            <span className="heading-primary-sub">showcasing my projects</span>
+            <span className="heading-primary-sub">I'm a forntend developer</span>
           </h1>
-          <a href="#" className="btn btn-orange">
-            Dicover
-          </a>
         </div>
+
+        <a href="#" className="btn btn- btn-animated">
+          Dicover
+        </a>
+
         <div className="projects">
           <h1 className="projects-title">Projects</h1>
           <div className="project-container">

@@ -1,8 +1,20 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --main-font-color: #6a605c;
+}
+
 .main {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(to bottom left, #0f0f0f, #04003b);
+  background-image: linear-gradient(to bottom left, #cdf7f6, #10f9f5);
 }
 .container {
   display: flex;
@@ -12,43 +24,25 @@
   position: relative;
 }
 
-.impressive-object {
-  height: 95vh;
-  width: 100vw;
-  background-image: linear-gradient(
-      to left,
-      hsla(270, 86%, 64%, 0.603),
-      hsla(244, 100%, 12%, 0.767)
-    ),
-    url("./images/bg.jpg");
-  background-size: cover;
-  background-position: top;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn-container {
-  display: flex;
-  justify-content: center;
-}
-
 .heading-primary {
-  color: white;
-  text-transform: uppercase;
+  color: var(--main-font-color);
+  margin-top: 8rem;
   margin-bottom: 8rem;
 }
 
 .heading-primary-main {
   display: block;
   font-size: 3rem;
-  letter-spacing: 2rem;
   font-weight: 400;
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   backface-visibility: hidden;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes moveInLeft {
@@ -68,19 +62,9 @@
 .heading-primary-sub {
   display: block;
   font-size: 2rem;
-  letter-spacing: 1rem;
   font-weight: 200;
   animation: moveInRight 1s ease-out;
   backface-visibility: hidden;
-  /* animation-name: moveInRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-out; */
-
-  /*
-  animation-delay: 1s;
-  animation-iteration-count: 4;
-
-  */
 }
 
 @keyframes moveInRight {
@@ -108,7 +92,7 @@
 .projects {
   height: 100vh;
   width: 50vw;
-  color: white;
+  color: var(--main-font-color);
 }
 
 .projects-title {
@@ -126,7 +110,7 @@
 .about-me {
   height: 50vh;
   width: 50vw;
-  color: white;
+  color: var(--main-font-color);
 }
 
 .about-title {
@@ -141,7 +125,7 @@
 .contact {
   height: 50vh;
   width: 50vw;
-  color: white;
+  color: var(--main-font-color);
 }
 
 .contact-title {
@@ -165,16 +149,55 @@
   color: white;
   border-radius: 5rem;
   transition: all 0.2s;
+  position: relative;
 }
 
 .btn:hover {
-  background-color: white;
+  background-color: coral;
   transform: translateY(-0.25rem);
-  color: coral;
+  color: white;
   box-shadow: 0 2.5rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
   transform: translateY(-0.1rem);
   box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-orange::after {
+  background-color: coral;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+@keyframes moveBotton {
+  0% {
+    opacity: 0;
+    transform: translateY(9rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-animated {
+  animation: moveBotton 1s ease-in 0.75s;
+  animation-fill-mode: backwards;
 }
