@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [items, setItems] = useState(["About", "Projects", "Contact"]);
+  const [items, setItems] = useState(["Home", "About", "Projects", "Contact"]);
   return (
     <div className="navbar">
       {items.map((item) => (
-        <div>{item}</div>
+        <a className="item-nav" key={item}>
+          {item}
+        </a>
       ))}
     </div>
   );

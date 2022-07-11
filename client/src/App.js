@@ -6,18 +6,17 @@ function App() {
   const initialState = {
     projects: ["Instagram Clone", "Recipe Builder", "Messenger App"]
   };
-  const [projects, setProjects] = useState(initialState.projects);
+  const [projects] = useState(initialState.projects);
   return (
     <div className="main">
       <div className="container">
-        <div className="heading-primary-container">
-          <h1 className="heading-primary">
-            <span className="heading-primary-main">Welcome to my portfolio</span>
-            <span className="heading-primary-sub">I'm a forntend developer</span>
-          </h1>
-        </div>
+        <Navbar />
+        <h1 className="heading-primary--title">
+          Welcome to my portfolio <br />
+          I'm a frontend developer{" "}
+        </h1>
 
-        <a href="#" className="btn btn- btn-animated">
+        <a href="#" className="btn btn-animated">
           Dicover
         </a>
 
